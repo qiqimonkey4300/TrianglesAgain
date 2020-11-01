@@ -20,5 +20,14 @@ public class Point {
     return y;
   }
 
-  
+  public double distanceTo(Point other) {
+    double x1 = this.x - other.x;
+    double y1 = this.y - other.y;
+    double d = Math.sqrt(x1 * x1 + y1 * y1);
+    return d;
+  }
+
+  public boolean equals(Point other) {
+    return (this.x == other.x && this.y == other.y);
+  }
 }
